@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="font2/iconfont.css" />
+	<link rel="stylesheet" type="text/css" href="css/login.css" />
+</head>
+
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="header-yi">
+				<div class="header-logo"><a href="index.html"><img src="images/logo.jpg"></a></div>
+				<p class="header-text">欢迎登录</p>
+			</div>
+		</div>
+	</div>
+	<div class="body">
+		<div class="body-form">
+			<h1 class="body-form-t">账户登录</h1>
+			<div class="body-input">
+				<span class="iconfont icon-yonghu"></span>
+				<input type="text" placeholder="请输入用户名或邮箱" id="zhang">
+			</div>
+			<div class="body-input">
+				<span class="iconfont icon-lock-fill"></span>
+				<input type="password" placeholder="请输入密码" id="mima">
+			</div>
+			<div class="body-wj">
+				<a href="#">忘记密码</a>
+			</div>
+			<div class="body-btn">
+				<button>登录</button>
+			</div>
+			<div class="body-zc">
+				<a href="register.html"><span class="iconfont icon-you"></span><span>立即注册</span></a>
+			</div>
+		</div>
+	</div>
+	<div class="foot">
+		姓名：xxx 学号：xxx
+	</div>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			$('.body-btn').click(function () {
+				if ($('#zhang').val() != '' || $('#mima').val() != '') {
+					$.ajax({
+						url: 'http://localhost:1550/api/users/dengru',
+						data: { name: $('#zhang').val(), password: $('#mima').val() },
+						type: 'get',
+						datatype: 'json',
+						success: function (dt) {
+							if (dt != false) {
+								alert('登陆成功！');
+								console.log(dt);
+							} else {
+								alert('登入失败！，请检查账号或密码是否填写正确！');
+								console.log(dt);
+							}
+						}
+					})
+				} else {
+					alert('文本框不能为空！');
+				}
+			})
+		})
+	</script>
+</body>
+
+</html>

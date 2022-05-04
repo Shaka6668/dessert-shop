@@ -1,0 +1,144 @@
+@font-face {
+	font-family: wending;
+	src: url("../font/SourceHanSansCN-Normal.ttf");
+}
+
+* {
+	font-family: wending;
+	color: #4d4d4d;
+}
+
+body {
+	margin: 0;
+}
+
+input,
+textarea {
+	padding: 0;
+	margin: 0;
+	background: none;
+	outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	padding: 0;
+	margin: 0;
+	font-weight: 500;
+}
+
+ul,
+ol,
+dl,
+li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	margin: 0;
+}
+
+button {
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+	width: 1200px;
+	height: 100%;
+	margin: auto;
+}
+
+.header {
+	width: 100%;
+	height: 80px;
+	border-bottom: 1px solid rgb(239, 239, 239);
+}
+
+.header>.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header .j-logo {
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.header .j-logo>img {
+	display: block;
+	height: 80%;
+}
+
+.header .j-nav {
+	display: flex;
+	height: 100%;
+}
+
+.header .j-nav>li {
+	height: 100%;
+	margin-right: 40px;
+}
+
+.header .j-nav>li:last-child{
+	margin-right: 0;
+}
+
+.header .j-nav>li>a {
+	display: block;
+	height: 100%;
+	line-height: 80px;
+	font-size: 18px;
+}
+
+.header .j-nav>li:hover {
+	border-bottom: 3px solid #FFB2B2;
+}
+
+.j-navhover {
+	border-bottom: 3px solid #FFB2B2;
+}
+
+.j-ss {
+	display: flex;
+	align-items: center;
+	border: 1px solid rgba(0, 0, 0, .15);
+	border-radius: 20px;
+	height: 36px;
+	padding: 0 15px;
+}
+
+.j-ss>input {
+	width: 130px;
+	border: none;
+	background: none;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+.j-ss>img {
+	height: 60%;
+}
+
+/* 头部结束 */
+.footer{
+	height: 100px;
+}
+.footer p{
+	height: 100%;
+	line-height: 100px;
+	text-align: center;
+}
+/* 尾部结束 */
